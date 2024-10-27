@@ -11,22 +11,22 @@ let { chapters, title_japanese, url, type, score, members, background, status, v
 let author = json.data[0].authors[0].name
 let animeingfo = `✿︎ Título: ${title_japanese}
 ✿︎ Capítulo: ${chapters}
-💫 Transmisión: ${type}
-🗂 Estado: ${status}
-🗃 Volumes: ${volumes}
-🌟 Favorito: ${favorites}
-🧮 Puntaje: ${score}
-👥 Miembros: ${members}
-🔗 Url: ${url}
-👨‍🔬 Autor: ${author}
-📝 Fondo: ${background}
-💬 Sinopsis: ${synopsis}
+✧ Transmisión: ${type}
+❁ Estado: ${status}
+⚜ Volumes: ${volumes}
+✮ Favorito: ${favorites}
+✦ Puntaje: ${score}
+ღ Miembros: ${members}
+☀ Url: ${url}
+♛ Autor: ${author}
+☪ Fondo: ${background}
+✪ Sinopsis: ${synopsis}
  ` 
-conn.sendFile(m.chat, json.data[0].images.jpg.image_url, 'anjime.jpg', '      ✿︎ *I N F O - A N I M E* ✿︎\n\n' + animeingfo, fkontak, m)
+conn.sendFile(m.chat, json.data[0].images.jpg.image_url, 'anime.jpg', '      ✿︎ *I N F O - A N I M E* ✿︎\n\n' + animeingfo, fkontak, m)
 
 } 
 handler.help = ['infoanime'] 
 handler.tags = ['anime'] 
-handler.command = ['infoanime', 'animeinfo'] 
+handler.command = ['infoa', 'animeinfo'] 
 
 export default handler
