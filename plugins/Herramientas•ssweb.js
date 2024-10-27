@@ -1,9 +1,9 @@
 import fetch from 'node-fetch'
 let handler = async (m, { conn, command, args }) => {
-if (!args[0]) return conn.reply(m.chat, '⚠️ *Ingrese el Link de una página.*', m, )
+if (!args[0]) return conn.reply(m.chat, '✦ *Ingrese el Link de una página.*', m, )
 try {
 await m.react(rwait)
-conn.reply(m.chat, '🚀 Buscando su información....', m, {
+conn.reply(m.chat, '✦ Buscando su información....', m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: packname,
 body: dev,
