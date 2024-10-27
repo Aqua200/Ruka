@@ -5,12 +5,12 @@ if (!nomor) return conn.reply(m.chat, '*Uso Correcto:*\n*✿︎ #spamwa numero|t
 
 if (!pesan) return conn.reply(m.chat, '*Uso Correcto:*\n*✿︎ #spamwa numero|texto|cantidad*', m, );
 
-if (jumlah && isNaN(jumlah)) return conn.reply(m.chat, '*✿︎ La cantidad deve ser un numero*', m, );
+if (jumlah && isNaN(jumlah)) return conn.reply(m.chat, '*✿︎ La cantidad debe ser un numero*', m, );
 
 const fixedNumber = nomor.replace(/[-+<>@]/g, '').replace(/ +/g, '').replace(/^[0]/g, '62') + '@s.whatsapp.net';
 const fixedJumlah = jumlah ? jumlah * 1 : 10;
 
-if (fixedJumlah > 999) return conn.reply(m.chat, '*⚠️ Minimo 50 Caracteres*', m, );
+if (fixedJumlah > 999) return conn.reply(m.chat, '*❀ Minimo 50 Caracteres*', m, );
 
 await conn.reply(m.chat, '*✿︎ Se envió con éxito el spam.*', m, );
 for (let i = fixedJumlah; i > 1; i--) {
