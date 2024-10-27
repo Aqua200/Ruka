@@ -1,7 +1,7 @@
 let handler  = async (m, { conn }) => {
 if (global.conn.user.jid == conn.user.jid) conn.reply(m.chat, `✿︎ El Bot principal no se puede apagar.`, m, )
 else {
-await conn.reply(m.chat, `✿︎ Adiós Ai`, m, )
+await conn.reply(m.chat, `✿︎ Adiós`, m, )
 conn.ws.close()
 }}
 handler.help = ['detener']
