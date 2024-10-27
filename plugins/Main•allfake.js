@@ -51,10 +51,10 @@ global.emoji4 = '✨'
 global.emojis = [emoji, emoji2, emoji3, emoji4].getRandom()
 
 //mensaje en espera
-global.wait = '🧸 Eʂρҽɾҽ υɳ ɱσɱҽɳƚσ...'
-global.waitt = '🧸 Eʂρҽɾҽ υɳ ɱσɱҽɳƚσ...'
-global.waittt = '🧸 Eʂρҽɾҽ υɳ ɱσɱҽɳƚσ...'
-global.waitttt = '🧸 Eʂρҽɾҽ υɳ ɱσɱҽɳƚσ...'
+global.wait = '❀ Eʂρҽɾҽ υɳ ɱσɱҽɳƚσ...'
+global.waitt = '❀ Eʂρҽɾҽ υɳ ɱσɱҽɳƚσ...'
+global.waittt = '❀ Eʂρҽɾҽ υɳ ɱσɱҽɳƚσ...'
+global.waitttt = '❀ Eʂρҽɾҽ υɳ ɱσɱҽɳƚσ...'
 
 //Enlaces
 var pagina = 'https://ianalejandrook15x.godaddysites.com'  
@@ -88,9 +88,9 @@ global.fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJ
 
 
 global.icono = [ 
-'https://qu.ax/HHXnW.jpg',
-'https://qu.ax/RilnK.jpg',
-'https://qu.ax/TcfhE.jpg'
+'https://qu.ax/SljFc.jpg',
+'https://qu.ax/bavxU.jpg',
+'https://qu.ax/bavxU.jpg'
 ].getRandom()
 
 export default handler
