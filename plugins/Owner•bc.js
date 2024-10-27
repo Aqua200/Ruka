@@ -9,7 +9,7 @@ const handler = async (m, {conn, command, participants, usedPrefix, text}) => {
   const teks4 = text ? text : cc4.text;
   const groups2 = Object.keys(await conn.groupFetchAllParticipating());
   const chats2 = Object.keys(global.db.data.users).filter((user) => user.endsWith('@s.whatsapp.net'));
-  await conn.reply(m.chat, '⭐️ *El texto se está enviando a los chats*', m, );
+  await conn.reply(m.chat, '✧ *El texto se está enviando a los chats*', m, );
   const start2 = new Date().getTime();
   const usersTag2 = participants.map((u) => conn.decodeJid(u.id));
   let totalPri2 = 0;
@@ -17,12 +17,12 @@ const handler = async (m, {conn, command, participants, usedPrefix, text}) => {
     const group = groups2[i];
     const delay = i * 4000; // 4 seg
     setTimeout(async () => {
-      await conn.reply(group, `⭐️ M E N S A J E ⭐️\n\n` + teks4, {mentions: usersTag2}, {quoted: fkontak});
+      await conn.reply(group, `✧ M E N S A J E ✧\n\n` + teks4, {mentions: usersTag2}, {quoted: fkontak});
     }, delay);
   }
   for (const user of chats2) {
     await new Promise((resolve) => setTimeout(resolve, 2000)); // 2 segundos
-    await conn.reply(user, `⭐️ M E N S A J E ⭐️\n\n` + teks4, fkontak, null);
+    await conn.reply(user, `✧ M E N S A J E ✧\n\n` + teks4, fkontak, null);
     totalPri2++;
     if (totalPri2 >= 500000) {
       break;
@@ -40,7 +40,7 @@ const handler = async (m, {conn, command, participants, usedPrefix, text}) => {
   } else {
     time2 = `${time2} segundos`;
   }
-await m.reply(`⭐️ Mensaje enviado a:\n✿︎ Chats Privados: ${totalPrivate2}\n⚜️ Chats De Grupos: ${totalGroups2}\n✿︎ Chats Totales: ${total2}\n\n⏱️ *Tiempo total de envio:* ${time2}\n${totalPri2 >= 500000 ? `\n${packname}` : ''}`);
+await m.reply(`✧ Mensaje enviado a:\n✿︎ Chats Privados: ${totalPrivate2}\n✦ Chats De Grupos: ${totalGroups2}\n✿︎ Chats Totales: ${total2}\n\n✧ *Tiempo total de envio:* ${time2}\n${totalPri2 >= 500000 ? `\n${packname}` : ''}`);
 };
 handler.help = ['broadcast', 'bc'];
 handler.tags = ['owner'];
