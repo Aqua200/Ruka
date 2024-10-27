@@ -1,6 +1,6 @@
 {
-"name": "AkariBot-MD",
-"version": "2.0.7",
+"name": "Sylpha",
+"version": "0.0.1",
 "description": "Simple WhatsApp Bot Multi Device",
 "main": "index.js",
 "type": "module",
@@ -18,22 +18,19 @@
 "eslint": "eslint .",
 "eslintfix": "eslint --fix ."
 },
-"homepage": "https://github.com/ianalejandrook15x/AkariBot-MD",
+"homepage": "https://github.com/ianalejandrook15x/Sylpha",
 "author": {
 "name": "ianalejandrook15x"
 },
 "collaborators": {
-"col1": "David-Chian",
-"col2": "SheZir",
-"col3": "CheirZ",
-"col4": "glyglobal"
+"col1": "ianalejandrook14x",
 },
 "repository": {
 "type": "git",
-"url": "git+https://github.com/ianalejandrook15x/AkariBot-MD.git"
+"url": "git+https://github.com/ianalejandrook15x/Sylpha.git"
 },
 "bugs": {
-"url": "https://github.com/ianalejandrook15x/AkariBot-MD/issues"
+"url": "https://github.com/ianalejandrook15x/Sylpha/issues"
 },
 "license": "GPL-3.0-or-later",
 "dependencies": {
