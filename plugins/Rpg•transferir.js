@@ -6,13 +6,13 @@ async function handler(m, { conn, args, usedPrefix, command }) {
   const user = global.db.data.users[m.sender];
   const item = items.filter((v) => v in user && typeof user[v] == 'number');
   const lol = `*┏━┅┉┅┄┄┄⟞⟨⟡⟩⟝┄┄┄┉┉┉━┓*
-*┃✿︎ Uso correcto del comando.* 
-*┃◉ ${usedPrefix + command}*  [tipo] [cantidad] [@user]
-*┃✿︎ Ejemplo:* ${usedPrefix + command} exp 65 @${m.sender.split('@')[0]}
+*┃★ Uso correcto del comando.* 
+*┃★ ${usedPrefix + command}*  [tipo] [cantidad] [@user]
+*┃★ Ejemplo:* ${usedPrefix + command} exp 65 @${m.sender.split('@')[0]}
 ┣❣◤▬▭▬▭▬ ◆ ▬▭▬▭▬ ◤❢
-*┃◉ 🪴 Articulos Transferibles.*
-┃▢ *Yenes* = yenes
-┃▢ *Experiencia* = exp
+*┃★ 🪴 Articulos Transferibles.*
+┃★ *Yenes* = yenes
+┃★ *Experiencia* = exp
 *┗━┅┉┅┄┈┄⟞⟨⟠⟩⟝┄┈┄┉┉┉━┛*
 `.trim();
   const type = (args[0] || '').toLowerCase();
@@ -21,7 +21,7 @@ async function handler(m, { conn, args, usedPrefix, command }) {
   const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : args[2] ? (args[2].replace(/[@ .+-]/g, '') + '@s.whatsapp.net') : '';
   if (!who) return conn.sendMessage(m.chat, {text: '*✿︎ Mensiona al usuario.*', mentions: [m.sender]}, {quoted: m});
   if (!(who in global.db.data.users)) return conn.sendMessage(m.chat, {text: `*✿︎ El usuario ${who} no esta en la base de datos.*`, mentions: [m.sender]}, {quoted: m});
-  if (user[type] * 1 < count) return conn.sendMessage(m.chat, {text: `*💥 No tienes suficientes ${type} para transferie.*`, mentions: [m.sender]}, {quoted: m});
+  if (user[type] * 1 < count) return conn.sendMessage(m.chat, {text: `*★ No tienes suficientes ${type} para transferie.*`, mentions: [m.sender]}, {quoted: m});
 const confirm = `🌺 *¿Estas seguro que quieres transferir ${count} ${type} a @${(who || '').replace(/@s\.whatsapp\.net/g, '')}?* 
 • *Tienes 60 seg para responder*
 
