@@ -13,7 +13,7 @@ conn.reply(m.chat, `
 > ✿ https://nontonanimeid.top
 > ✿ https://kazefuri.vip
 > ✿ https://pendekarsubs.us
-> ✿ https://myanimelist.net`, m, , )
+> ✿ https://myanimelist.net`, m, )
 
 handler.help = ['animelink']
 handler.tags = ['anime']
