@@ -40,12 +40,12 @@ global.jadi = 'BotJadiBot'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = 'Sylpha'
-global.botname = 'Sylpha ✿︎'
-global.wm = 'Sylpha Bσƚ ✿︎'
+global.packname = 'Sყʅρԋα'
+global.botname = 'Sყʅρԋα ✿︎'
+global.wm = 'Sყʅρԋα Bσƚ ✿︎'
 global.author = 'By ianalejandrook15x'
 global.dev = 'Pσɯҽɾҽԃ Bყ Tҽαɱ Sԋιɳιɳɠ'
-global.textbot = 'Sylpha ✿︎'
+global.textbot = 'Sყʅρԋα ✿︎'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
