@@ -1,7 +1,4 @@
-/*
-《✧》DERECHOS RESERVADOS POR EL AUTOR《✧》
-- GabrielVz (@glytglobal)
-*/
+
 
 import fetch from 'node-fetch'
 
@@ -22,15 +19,15 @@ sourceUrl: channel }}})
 let res = await fetch(`http://registry.npmjs.com/-/v1/search?text=${text}`)
 let { objects } = await res.json()
 
-if (!objects.length) return conn.reply(m.chat, `『✦』 No se encontró resultado de: ${text}`, m, )
+if (!objects.length) return conn.reply(m.chat, `No se encontraron resultados de: ${text}`, m, )
 
 let txt = objects.map(({ package: pkg }) => {
-return `《✧》 𝖲craper - Akari 《✧》
+return `【 ★ Sylpha - Scraper ★ 】
 
-✦ 𝐍𝐨𝐦𝐛𝐫𝐞: ${pkg.name}
-✦ 𝐕𝐞𝐫𝐬𝐢𝐨𝐧: V${pkg.version}
-✦ 𝐄𝐧𝐥𝐚𝐜𝐞: ${pkg.links.npm}
-✦ 𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐜𝐢𝐨𝐧: ${pkg.description}
+☾ NσɱႦɾҽ: ${pkg.name}
+☾ Vҽɾʂισɳ: V${pkg.version}
+☾ Eɳʅαƈҽ: ${pkg.links.npm}
+☾ Dҽʂƈɾιρƈισɳ: ${pkg.description}
 \n\n----------`
 }).join`\n\n`
 
