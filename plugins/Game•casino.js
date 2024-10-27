@@ -25,13 +25,13 @@ if (args.length < 1) return conn.reply(m.chat, '✿︎ Ingresa la cantidad de ' 
 if (user.yenes >= count * 1) {
 user.yenes -= count * 1
 if (Aku > Kamu) {
-conn.reply(m.chat, '`✿︎ Veamos que numeros tienen!`\n\n'+ `➠ *AkariBot* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *PERDISTE* ${formatNumber(count)} 💴 Yenes.`.trim(), m, )
+conn.reply(m.chat, '`✿︎ Veamos que numeros tienen!`\n\n'+ `➠ *Sylpha* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *PERDISTE* ${formatNumber(count)} 💴 Yenes.`.trim(), m, )
 } else if (Aku < Kamu) {
 user.yenes += count * 2
-conn.reply(m.chat, '`✿︎ Veamos que numeros tienen!`\n\n'+ `➠ *AkariBot* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *GANASTE* ${formatNumber(count * 2)} 💴 Yenes.`.trim(), m, )
+conn.reply(m.chat, '`✿︎ Veamos que numeros tienen!`\n\n'+ `➠ *Sylpha* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *GANASTE* ${formatNumber(count * 2)} 💴 Yenes.`.trim(), m, )
 } else {
 user.yenes += count * 1
-conn.reply(m.chat, '`✿︎ Veamos que numeros tienen!`\n\n'+ `➠ *AkariBot* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username} obtienes ${formatNumber(count * 1)} 💴 Yenes.`.trim(), m, )}
+conn.reply(m.chat, '`✿︎ Veamos que numeros tienen!`\n\n'+ `➠ *Sylpha* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username} obtienes ${formatNumber(count * 1)} 💴 Yenes.`.trim(), m, )}
 } else conn.reply(m.chat, `No tienes *${formatNumber(count)} 💴 Yenes* para apostar!`.trim(), m, )}
 
 handler.help = ['apostar *<cantidad>*']
