@@ -3,7 +3,7 @@ import yts from "yt-search";
 
 const handler = async (m, {conn, command, args, text, usedPrefix}) => {
 
-if (!text) return conn.reply(m.chat, `✿︎ *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} Distancia - Kimberly Contreraxx`,  m, , )
+if (!text) return conn.reply(m.chat, `✿︎ *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} Nakano Nino Edit`,  m, , )
 
 conn.reply(m.chat, global.wait, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
@@ -15,11 +15,11 @@ sourceUrl: channel }}})
 try { 
 await m.react(rwait)
 const yt_play = await search(args.join(' '))
-let txt = `*乂  Y O U T U B E  -  P L A Y  乂*\n\n`
-    txt += `✿︎ *Titulo:*\n${yt_play[0].title}\n\n`
-    txt += `📅 *Publicado:*\n${yt_play[0].ago}\n\n`
-    txt += `🕜 *Duración:*\n${secondString(yt_play[0].duration.seconds)}\n\n`
-    txt += `📎 *Url:*\n${yt_play[0].url}`
+let txt = `*❖  Y O U T U B E  -  P L A Y  ❖*\n\n`
+    txt += `☆ *Titulo:*\n${yt_play[0].title}\n\n`
+    txt += `☆ *Publicado:*\n${yt_play[0].ago}\n\n`
+    txt += `☆ *Duración:*\n${secondString(yt_play[0].duration.seconds)}\n\n`
+    txt += `☆ *Url:*\n${yt_play[0].url}`
 
 let listSections = []
 listSections.push({
