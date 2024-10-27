@@ -8,12 +8,12 @@ let handler = async (m, { conn }) => {
           let child = stdout.toString("utf-8");
           let ssd = child.replace(/Memory:/, "Ram:");
 
-          conn.reply(m.chat, `*Pong* 🏓 ${latensi.toFixed(4)} ms`, m, );
+          conn.reply(m.chat, `*Lag* ✰ ${latensi.toFixed(4)} ms`, m, );
             });
 }
 handler.help = ['ping']
 handler.tags = ['info']
-handler.command = ['ping', 'p']
+handler.command = ['ping', 'lactencia']
 handler.register = false
 
 export default handler
