@@ -32,22 +32,22 @@ function handler(m, {groupMetadata}) {
   do j = ps[Fl(R() * ps.length)];
   while (b === a);
   m.reply(
-    `*_😍Las 5 mejores parejas del grupo😍_*
+    `*★ Las 5 mejores parejas del grupo ★*
     
 *_1.- ${toM(a)} y ${toM(b)}_*
-- Esta pareja esta destinada a estar junta 💙
+- Esta pareja esta destinada a estar junta ✧
 
 *_2.- ${toM(c)} y ${toM(d)}_*
-- Esta pareja son dos pequeños tortolitos enamorados ꕥ
+- Esta pareja son dos pequeños tortolitos enamorados ✧
 
 *_3.- ${toM(e)} y ${toM(f)}_*
-- Ufff y que decir de esta pareja, ya hasta familia deberian tener 🤱🧑‍🍼
+- Ufff y que decir de esta pareja, ya hasta familia deberian tener ✧
 
 *_4.- ${toM(g)} y ${toM(h)}_*
-- Estos ya se casaron en secreto 💍
+- Estos ya se casaron en secreto ✧
 
 *_5.- ${toM(i)} y ${toM(j)}_*
-- Esta pareja se esta de luna de miel ꕥ🥵😍❤️*`,
+- Esta pareja se esta de luna de miel ✧*`,
     null,
     {
       mentions: [a, b, c, d, e, f, g, h, i, j],
