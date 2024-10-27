@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 
 var handler = async (m, { text,  usedPrefix, command }) => {
-if (!text) return conn.reply(m.chat, `✿︎ *Ingresé una petición*\n\nEjemplo, ${usedPrefix + command} Conoces a Ai-Akari?`, m, )
+if (!text) return conn.reply(m.chat, `✿︎ *Ingresé una petición*\n\nEjemplo, ${usedPrefix + command} Conoces a chatgpt`, m, )
 try {
 await m.react('🕒')
 var apii = await fetch(`https://aemt.me/bard?text=${text}`)
