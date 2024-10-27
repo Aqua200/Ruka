@@ -11,15 +11,15 @@ var handler = async (m, { conn, participants, usedPrefix, command }) => {
     //const nn = conn.getName(m.sender);
 
     if (user === conn.user.jid) {
-        return conn.reply(m.chat, '✿︎ No puedo eliminar el bot del grupo', m, );
+        return conn.reply(m.chat, '✿︎ El bot no puede auto eliminarse', m, );
     }
 
     if (user === ownerGroup) {
-        return conn.reply(m.chat, '✿︎ No puedo eliminar al propietario del grupo', m, );
+        return conn.reply(m.chat, '✿︎ No puedo eliminar al creador de este grupo', m, );
     }
 
     if (user === ownerBot) {
-        return conn.reply(m.chat, '✿︎ No puedo eliminar al propietario del bot', m,  );
+        return conn.reply(m.chat, '✿︎ No puedo eliminar al creador de la bot', m,  );
     }
 
     await conn.groupParticipantsUpdate(m.chat, [user], 'remove');
