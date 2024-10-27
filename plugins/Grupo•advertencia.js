@@ -11,7 +11,7 @@ who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text;
   const dReason = 'Sin motivo';
   const msgtext = text || dReason 
   const sdms = msgtext.replace(/@\d+-?\d* /g, '');
-  const warntext = `*❌ Etiquete a una persona o responda a un mensaje del grupo para advertir al usuario*\n\n*Ejemplo:*\n*${usedPrefix + command} @tag*`;
+  const warntext = `*ツ Etiquete a una persona o responda a un mensaje del grupo para advertir al usuario*\n\n*Ejemplo:*\n*${usedPrefix + command} @tag*`;
   if (!who) {
 return m.reply(warntext, m.chat, { mentions: conn.parseMention(warntext) });
   }
@@ -29,7 +29,7 @@ return
   );
   if (user.warn >= 4) {
     user.warn = 0;
-    await m.reply(`𝚃𝙴 𝙻𝙾 𝙰𝙳𝚅𝙴𝚁𝚃𝙸 𝚅𝙰𝚁𝙸𝙰𝚂 𝚅𝙴𝙲𝙴𝚂!!\n*@${who.split`@`[0]}* 𝚂𝚄𝙿𝙴𝚁𝙰𝚂𝚃𝙴 𝙻𝙰𝚂 *4* 𝙰𝙳𝚅𝙴𝚁𝚃𝙴𝙽𝙲𝙸𝙰𝚂, 𝙰𝙷𝙾𝚁𝙰 𝚂𝙴𝚁𝙰𝚂 𝙴𝙻𝙸𝙼𝙸𝙽𝙰𝙳𝙾/𝙰 👽`, null, { mentions: [who] },
+    await m.reply(`*# Has sido advertido/a varias veces*\n*@${who.split`@`[0]}* *Superaste las 4 Adevrtencias, ahora seras expulsado/a ❀*`, null, { mentions: [who] },
     );
     await conn.groupParticipantsUpdate(m.chat, [who], 'remove');
   }
