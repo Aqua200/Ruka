@@ -25,7 +25,7 @@ const handler = async (m, {conn, text, usedPrefix, command}) => {
     else user.premiumTime = now + hora1;
     user.premium = true;
     const timeLeft = (user.premiumTime - now) / 1000; // tiempo restante en segundos
-    const textprem1 = `*🎟️ Nuevo Usuario Premium!!!*\n\n*ꕥ User: ${name}*\n*🕐 Tiempo: ${txt} hora(s)*\n*📉 Restante: ${timeLeft} segundos*`;
+    const textprem1 = `*✧ Nuevo Usuario Premium*\n\n*✦ User: ${name}*\n*✧ Tiempo: ${txt} hora(s)*\n*✦ Restante: ${timeLeft} segundos*`;
     m.reply(textprem1, null, {mentions: conn.parseMention(textprem1)});
   }
 
@@ -34,7 +34,7 @@ const handler = async (m, {conn, text, usedPrefix, command}) => {
     else user.premiumTime = now + dia1;
     user.premium = true;
     const timeLeft = (user.premiumTime - now) / 1000 / 60 / 60; // tiempo restante en horas
-    const textprem2 = `*🎟️ Nuevo Usuario Premium!!!*\n\n*ꕥ User: ${name}*\n*🕐 Tiempo: ${txt} día(s)*\n*📉 Restante: ${timeLeft} horas*`;
+    const textprem2 = `*✧ Nuevo Usuario Premium*\n\n*✦ User: ${name}*\n*✧ Tiempo: ${txt} día(s)*\n*✦ Restante: ${timeLeft} horas*`;
     m.reply(textprem2, null, {mentions: conn.parseMention(textprem2)});
   }
 
@@ -43,7 +43,7 @@ const handler = async (m, {conn, text, usedPrefix, command}) => {
     else user.premiumTime = now + semana1;
     user.premium = true;
     formatTime(user.premiumTime - now).then((timeleft) => {
-      const textprem3 = `*🎟️ Nuevo Usuario Premium!!!*\n\n*ꕥ User: ${name}*\n*🕐 Tiempo: ${txt} semana(s)*\n*📉 Restante: ${timeleft}*`;
+      const textprem3 = `*✧ Nuevo Usuario Premium*\n\n*✦ User: ${name}*\n*✧ Tiempo: ${txt} semana(s)*\n*✦ Restante: ${timeleft}*`;
       m.reply(textprem3, null, {mentions: conn.parseMention(textprem3)});
     });
   }
@@ -53,7 +53,7 @@ const handler = async (m, {conn, text, usedPrefix, command}) => {
     else user.premiumTime = now + mes1;
     user.premium = true;
     formatTime(user.premiumTime - now).then((timeleft) => {
-      const textprem4 = `*🎟️ Nuevo Usuario Premium!!!*\n\n*ꕥ Usuario: ${name}*\n*🕐 Tiempo: ${txt} mes(es)*\n*📉 Restante: ${timeleft}*`;
+      const textprem4 = `*✧ Nuevo Usuario Premium*\n\n*✦ Usuario: ${name}*\n*✧ Tiempo: ${txt} mes(es)*\n*✦ Restante: ${timeleft}*`;
       m.reply(textprem4, null, {mentions: conn.parseMention(textprem4)});
     });
   }
