@@ -6,7 +6,7 @@ import {youtubedl, youtubedlv2} from '@bochilteam/scraper'
 
 const handler = async (m, {conn, command, args, text, usedPrefix}) => {
 
-if (!text) return conn.reply(m.chat, `❖ *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} Nakano Miku Edits`,  m, , )
+if (!text) return conn.reply(m.chat, `❖ *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} Nakano Miku Edits`,  m, )
 m.react(rwait)
 
 try {
@@ -77,7 +77,7 @@ const infoo = await ytdl.getInfo('https://youtu.be/' + __res[0].videoId)
 const ress = await ytdl.chooseFormat(infoo.formats, {filter: 'audioonly'})
 conn.sendMessage(m.chat, {audio: {url: ress.url}, fileName: __res[0].title + '.mp3', mimetype: 'audio/mp4'}, {quoted: fkontak})
 } catch {
-await conn.reply(m.chat, '🌟 *Ocurrió un fallo*', m, , )
+await conn.reply(m.chat, '🌟 *Ocurrió un fallo*', m, )
 }}}}
 
 if (command == 'play4' || command == 'playdoc2') {
@@ -110,11 +110,11 @@ const n4 = lolh.result.thumbnail
 await conn.sendMessage(m.chat, {document: {url: n2}, fileName: `${n}.mp4`, mimetype: 'video/mp4', thumbnail: await fetch(n4)}, {quoted: fkontak})
 } catch {
 
-await conn.reply(m.chat, '❖ *Ocurrió un fallo*', m, , )
+await conn.reply(m.chat, '❖ *Ocurrió un fallo*', m, )
 }}}}
 
 } catch {
-return conn.reply(m.chat, '❖ *Inténtelo de nuevo*', m, , )}
+return conn.reply(m.chat, '❖ *Inténtelo de nuevo*', m, )}
 
 }
 handler.help = ['play3', 'play4']
