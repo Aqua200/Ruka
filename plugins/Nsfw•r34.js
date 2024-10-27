@@ -46,9 +46,9 @@ const cleanDb = async () => {
 };
 
 const handler = async (m, { conn, usedPrefix, command, text }) => {
-if (!db.data.chats[m.chat].modohorny && m.isGroup) throw '✿︎ *¡Estos comandos están desactivados!*';
+if (!db.data.chats[m.chat].modohorny && m.isGroup) throw '✿︎ *Los comandos ingresados se encuentran desactivados*';
   if (!text) {
-    throw `✿︎ *Por favor, proporciona un texto*\n✿︎ *Ejemplo:* ${usedPrefix + command} Alya`;
+    throw `✿︎ *Por favor, proporciona un texto*\n✿︎ *Ejemplo:* ${usedPrefix + command} Maria Mikhailovna Kujou`;
   }
   
   try {
@@ -59,7 +59,7 @@ if (!db.data.chats[m.chat].modohorny && m.isGroup) throw '✿︎ *¡Estos comand
           mediaType: 1, 
           showAdAttribution: true,
           title: packname,
-          body: '🌟 Akari Watanabe - MD',
+          body: '✦ Sylpha - BOT ✦',
           previewType: 0, 
           thumbnail: icons,
           sourceUrl: redes 
@@ -145,7 +145,7 @@ if (!db.data.chats[m.chat].modohorny && m.isGroup) throw '✿︎ *¡Estos comand
 
   } catch (error) {
     console.error(error);
-    conn.reply(m.chat, `❌️ *Ocurrió un error:* ${error.message}`, m, );
+    conn.reply(m.chat, `*Ocurrió un error:* ${error.message}`, m, );
   }
 };
 
