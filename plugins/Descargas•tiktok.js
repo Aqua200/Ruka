@@ -48,7 +48,7 @@ m.react('✿︎')
           const cap = `Tσɱҽ ʂυ ʋιԃҽσ ԃҽ Tιƙ Tσƙ ✿︎`;
           await conn.sendMessage(m.chat, {video: {url: url}, caption: cap}, {quoted: fkontak});
         } catch {
-          throw `_*< DESCARGAS - TIKTOK />*_\n\n*🌟 Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+          throw `_*< DESCARGAS - TIKTOK />*_\n\n*❖ Ocurrio un eror, inténtalo de nuevo más tarde.*`;
           }
         }
       }
