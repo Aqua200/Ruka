@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems}) => {
-  if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `💥 *¡Estos comandos están desactivados!*`; 
+  if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `*Estos comandos se encuentran desactivados`; 
   try {
     const pp = imagen3;
     // let vn = './media/menu.mp3'
