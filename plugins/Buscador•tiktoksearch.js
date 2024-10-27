@@ -45,7 +45,7 @@ deviceListMetadataVersion: 2
 },
 interactiveMessage: proto.Message.InteractiveMessage.fromObject({
 body: proto.Message.InteractiveMessage.Body.create({ text: '✿︎ Resultado de: ' + text }),
-footer: proto.Message.InteractiveMessage.Footer.create({ text: '🔎 Tiktok - Busquedas' }),
+footer: proto.Message.InteractiveMessage.Footer.create({ text: '⚜ Tiktok - Busquedas' }),
 header: proto.Message.InteractiveMessage.Header.create({ hasMediaAttachment: false }),
 carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({ cards: [...results] })})}}
 }, { quoted: message })
@@ -59,5 +59,5 @@ handler.help = ['tiktoksearch <txt>']
 handler.yenes = 1
 handler.register = false
 handler.tags = ['buscador']
-handler.command = ['tiktoksearch', 'tiktoks']
+handler.command = ['tiktoksearch', 'tts']
 export default handler
