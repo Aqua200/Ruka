@@ -2,7 +2,7 @@ import yts from 'yt-search'
 
 var handler = async (m, { text, conn, args, command, usedPrefix }) => {
 
-if (!text) return conn.reply(m.chat, `✿︎ *Escriba el título de algún vídeo de Youtube*\n\nEjemplo, ${usedPrefix + command} Akari Nankano`, m, , )
+if (!text) return conn.reply(m.chat, `✿︎ *Escriba el título de algún vídeo de Youtube*\n\nEjemplo, ${usedPrefix + command} Sylpha edit`, m, , )
 
 conn.reply(m.chat, wait, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
@@ -18,16 +18,16 @@ switch (v.type) {
 case 'video': return `✿︎ *Título:* 
 » ${v.title}
 
-🔗 *Enlace:* 
+✧ *Enlace:* 
 » ${v.url}
 
-🕝 *Duración:*
+✧ *Duración:*
 » ${v.timestamp}
 
-✿︎ *Subido:* 
+✧ *Subido:* 
 » ${v.ago}
 
-👀 *Vistas:* 
+✧ *Vistas:* 
 » ${v.views}`}}).filter(v => v).join('\n\n••••••••••••••••••••••••••••••••••••\n\n')
 
 conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg', teks, fkontak, m)
