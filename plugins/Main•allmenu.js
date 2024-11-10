@@ -4,67 +4,64 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'main': 'INFO',
-  'buscador': 'BUSQUEDAS',
-  'fun': 'JUEGOS',
-  'serbot': 'SUB BOTS', 'main': 'MENÚ - INFO',
-  'buscador': 'MENÚ - BUSQUEDAS',
-  'fun': 'MENÚ - JUEGOS',
-  'gacha': 'MENÚ - GACHA',
-  'serbot': 'MENÚ - SUB BOTS',
-  'rpg': 'MENÚ - RPG',
-  'rg': 'MENÚ - REGISTRO',
-  'xp': 'MENÚ - EXP',
-  'sticker': 'MENÚ - STICKERS',
-  'anime': 'MENÚ - ANIMES',
-  'database': 'MENÚ - DATABASE',
-  'fix': 'MENÚ - FIXMSGESPERA',
-  'grupo': 'MENÚ - GRUPOS',
-  'nable': 'MENÚ - ON/OFF', 
-  'descargas': 'MENÚ - DESCARGAS',
-  'tools': 'MENÚ - HERRAMIENTAS',
-  'info': 'MENÚ - INFORMACIÓN',
-  'nsfw': 'MENÚ - NSFW', 
-  'owner': 'MENÚ - OWNER', 
-  'audio': 'MENÚ - AUDIOS', 
-  'ai': 'MENÚ - AI',
-  'transformador': 'MENÚ - CONVERTIDORES',
+  'main': '🄸🄽🄵🄾',
+  'buscador': '🄱🅄🅂🅀🅄🄴🄳🄰🅂',
+  'fun': '🄹🅄🄴🄶🄾🅂',
+  'serbot': '🅂🅄🄱 🄱🄾🅃🅂',
+  'rpg': '🅁🄿🄶',
+  'rg': '🅁🄴🄶🄸🅂🅃🅁🄾',
+  'xp': '🄴🅇🄿',
+  'sticker': '🅂🅃🄸🄲🄺🄴🅁🅂',
+  'anime': '🄰🄽🄸🄼🄴🅂',
+  'database': '🄳🄰🅃🄰🄱🄰🅂🄴',
+  'fix': '🄵🄸🅇🄼🅂🄶🄴🅂🄿🄴🅁🄰',
+  'grupo': '🄶🅁🅄🄿🄾🅂',
+  'nable': '🄾🄽 - 🄾🄵🄵', 
+  'descargas': '🄳🄴🅂🄲🄰🅁🄶🄰🅂',
+  'tools': '🄷🄴🅁🅁🄰🄼🄸🄴🄽🅃🄰🅂',
+  'info':'🄸🄽🄵🄾🅁🄼🄰🄲🄸🄾🄽',
+  'nsfw': '🄽🅂🄵🅆', 
+  'owner': '🄳🄴🅂🄰🅁🅁🄾🄻🄻🄰🄳🄾🅁', 
+  'audio': '🄰🅄🄳🄸🄾🅂', 
+  'ai': '🄰🄸',
+  'transformador': '🄲🄾🄽🅅🄴🅁🅃🄸🄳🄾🅁🄴🅂',
 }
 
 const defaultMenu = {
-  before: `*─ׄ─ׅ─⭒─ׄ─ׄ─⭒─ׅ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ─*
+  before: `© 𝗺𝗲𝗻𝘂 𝗼𝗳𝗶𝗰𝗶𝗮𝗹 𝗱𝗲 𝗬𝘂𝗿𝗶𝗻𝗲𝗕𝗼𝘁-𝗠𝗗 🪷
 
-Hola *%name* soy *Sylpha*
+*. ⋅ᘛ𒈒ᕐ⩺┈⍆⚞ 🌹 :･ﾟ✧:･ﾟ✧･ﾟ✧*
+*. ⋅⊰ꕤ ┆* ⭔ 🅄🅂🄴🅁x🄸🄽🄵🄾
+*. ⋅⊰ꕤ ┆* ・・・・・・・・・・・
+*. ⋅⊰ꕤ ┆* 🌸 Cliente: \`\`\`%name\`\`\`
+*. ⋅⊰ꕤ ┆* ✨️ Exp: \`\`\`%exp\`\`\`
+*. ⋅⊰ꕤ ┆* 🍪 Galletas: \`\`\`%cookies\`\`\`
+*. ⋅⊰ꕤ ┆* 🛡 Nivel: \`\`\`%level\`\`\`
+*. ⋅⊰ꕤ ┆* 💫 Rango: \`\`\`%role\`\`\`
+*. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
 
-%readmore
-┏━━━━━━━━ INFO - BOT
-┃  ➢ Cliente: %name
-┃  ➢ Exp: %exp
-┃  ➢ Nivel: %level
-┗━━━━━━━━━━━━━━
-%readmore
-┏━━━━━━━━━ INFO - USER
-┃  ➢ Bot: Sylpha
-┃  ➢ Modo Privado
-┃  ➢ Baileys: Multi Device
-┃  ➢ Tiempo Activo: %muptime
-┃  ➢ Usuarios: %totalreg 
-┗━━━━━━━━━━━━━━
-%readmore
-*─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
+*. ⋅ᘛ⁐̤ᕐ⩺┈•༶ 🌸 :･ﾟ✧:･ﾟ✧･ﾟ✧*
+*. ⋅⊰ꕤ ┆* ⭔ 🄸🄽🄵🄾x🄱🄾🅃
+*. ⋅⊰ꕤ ┆* ・・・・・・・・・・・
+*. ⋅⊰ꕤ ┆* 👑 Creador: EnzitoOfc
+*. ⋅⊰ꕤ ┆* 🪴 Modo: \`\`\`Publico\`\`\`
+*. ⋅⊰ꕤ ┆* 📚 Libreria: \`\`\`Baileys\`\`\`
+*. ⋅⊰ꕤ ┆* 🕖 Actividad: \`\`\`%muptime\`\`\`
+*. ⋅⊰ꕤ ┆* 👤 Usuarios: \`\`\`%totalreg\`\`\`
+*. ⋅ ˚̣- : ✧ : – ⭒ ⊹ ⭒ – : ✧ : -˚̣⋅ .*
 
-\t*L I S T A  -  D E  -  C O M A N D O S* 
+
+\t*🌠 𝑳 𝑰 𝑺 𝑻 - 𝑪 𝑶 𝑴 𝑴 𝑨 𝑵 𝑫 𝑺 🌠* 
 `.trimStart(),
-    header: '「 MENU ✧ %category 」\n ',
-  body: '> #>%cmd',
-  footer: '*─ׄ─ׅ─⭒─ׄ─ׄ─⭒─ׅ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ─*\n',
+    header: '* ¸.*☆*¸.*♡*.¸: 🪷 :¸.*☆*¸.*♡*.¸\n* ⁝⁞ ⍆𖤍 🌹 ⭔ %category\n* ⁝⁞ ⍆𖤍 🌹 ──── ◉ ────',
+  body: '* ⁝⁞ ⍆𖤍 🌹 %cmd',
+  footer: '* ✽+†+✽―― ☆. ∆ .☆ ――✽+†+✽\n',
   after: `> ${dev}`,
 }
-
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
-    let { exp, limit, level } = global.db.data.users[m.sender]
+    let { exp, cookies, level, role } = global.db.data.users[m.sender]
     let { min, xp, max } = xpRange(level, global.multiplier)
     let name = await conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
@@ -104,7 +101,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
         help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
         tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
         prefix: 'customPrefix' in plugin,
-        limit: plugin.limit,
+        cookies: plugin.cookies,
         premium: plugin.premium,
         enabled: !plugin.disabled,
       }
@@ -118,7 +115,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     let header = conn.menu.header || defaultMenu.header
     let body = conn.menu.body || defaultMenu.body
     let footer = conn.menu.footer || defaultMenu.footer
-    let after = conn.menu.after || (conn.user.jid == global.conn.user.jid ? '' : ``) + defaultMenu.after
+    let after = conn.menu.after || (conn.user.jid == conn.user.jid ? '' : `Powered by https://wa.me/${conn.user.jid.split`@`[0]}`) + defaultMenu.after
     let _text = [
       before,
       ...Object.keys(tags).map(tag => {
@@ -126,8 +123,8 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
           ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
             return menu.help.map(help => {
               return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
-                .replace(/%islimit/g, menu.limit ? '' : '')
-                .replace(/%isPremium/g, menu.premium ? '' : '')
+                .replace(/%isdiamond/g, menu.diamond ? '(ⓓ)' : '')
+                .replace(/%isPremium/g, menu.premium ? '(Ⓟ)' : '')
                 .trim()
             }).join('\n')
           }),
@@ -137,46 +134,46 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       after
     ].join('\n')
     let text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
-    let replace = {
-      '%': '%',
-      p: _p, uptime, muptime,
-      taguser: '@' + m.sender.split("@s.whatsapp.net")[0],
-      wasp: '@0',
-      me: conn.getName(conn.user.jid),
-      npmname: _package.name,
-      version: _package.version,
-      npmdesc: _package.description,
-      npmmain: _package.main,
-      author: _package.author.name,
-      license: _package.license,
-      exp: exp - min,
-      maxexp: xp,
-      totalexp: exp,
-      xp4levelup: max - exp,
-      github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
-      level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg,
-      readmore: readMore
-    }
-    text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    
-let urls = [
-"https://qu.ax/vnPMj.mp4",
-"https://qu.ax/vnPMj.mp4",
-];
-let gifUrl = urls[Math.floor(Math.random() * urls.length)];
-await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m});
+let replace = {
+'%': '%',
+p: _p, uptime, muptime,
+me: conn.getName(conn.user.jid),
+taguser: '@' + m.sender.split("@s.whatsapp.net")[0],
+npmname: _package.name,
+npmdesc: _package.description,
+version: _package.version,
+exp: exp - min,
+maxexp: xp,
+botofc: (conn.user.jid == global.conn.user.jid ? '🚩 𝙴𝚂𝚃𝙴 𝙴𝚂 𝙴𝙻 𝙱𝙾𝚃 𝙾𝙵𝙲' : `🚩 𝚂𝚄𝙱-𝙱𝙾𝚃 𝙳𝙴: Wa.me/${global.conn.user.jid.split`@`[0]}`), 
+totalexp: exp,
+xp4levelup: max - exp,
+github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
+greeting, level, cookies, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
+readmore: readMore
+}
+text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
+const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+
+const pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://qu.ax/zJqn.jpg')
+
+await conn.reply(m.chat, '╭ׅׄ̇─ׅ̻ׄ╮۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹۪̇߭︹ׅ̟ׄ̇︹ׅ۪ׄ̇߭︹ׅ̟ׄ̇⊹*\n├ ⚘݄𖠵⃕⁖𖥔.𝑪𝒂𝒓𝒈𝒂𝒏𝒅𝒐 𝑴𝒆𝒏𝒖...  ꪶꪾ❍̵̤̂̂ꫂ\n├Ą𝒈𝒖𝒂𝒓𝒅𝒆 𝒖𝒏 𝒎𝒐𝒎𝒆𝒏𝒕𝒐🌹\n╰ׁ̻─ׅׄ─۪۬─۟─۪─۟─۪۬─۟─۪─۟─۪۬─۟─۪─۟┄۪۬┄۟┄۪┈۟┈۪', m, { contextInfo:{ forwardingScore: 2024, isForwarded: true, externalAdReply: {title: namechannel, body: dev, sourceUrl: channel, thumbnail: icons }}})
+
+await m.react('🌠') 
+
+await conn.sendMessage(m.chat, {text: text, contextInfo: { forwardingScore: 999, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterName: 'Yurine |√ New Channel 💫', newsletterJid: "120363299088086208@newsletter", }, externalAdReply: { title: 'Yurine |√ New Channel ⚡︎', body: dev, thumbnailUrl: 'https://qu.ax/lJVp.jpg', sourceUrl: redeshost, mediaType: 1, renderLargerThumbnail: true }}}, {quoted: fkontak})
 
   } catch (e) {
-    conn.reply(m.chat, 'Lo sentimos, el menú tiene un error.', m)
+    await m.react(error)
+    conn.reply(m.chat, '❌️ Lo sentimos, el menú tiene un error', m, rcanal, )
     throw e
   }
 }
-
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = ['menu', 'help','allmenu', 'menú'] 
-handler.register = true 
+handler.command = ['menu', 'help', 'menú', 'menuall', 'allmenú', 'allmenu', 'menucompleto'] 
+handler.register = true
+
 export default handler
 
 const more = String.fromCharCode(8206)
