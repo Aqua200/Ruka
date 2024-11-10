@@ -60,14 +60,14 @@ global.avatar = fs.readFileSync('./src/img/avatar_contact.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.grupo = 'https://chat.whatsapp.com/KiJY7gZS17aLcP6qaGatFX'
-global.grupo2 = 'https://chat.whatsapp.com/JJGQs5aCsTsAsHbw752fBv'
-global.grupo3 = 'https://chat.whatsapp.com/G2bAsa8E11mLLitGxI0iUQ'
-global.channel = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u'
-global.md = 'https://github.com/ianalejandrook15x/AkariBot-MD' 
-global.yt = 'https://www.youtube.com/@ianalejandrook14x'
-global.tiktok = 'https://tiktok.com/@ian.ian271'
-global.correo = 'alejandroxddd92@gmail.com'
+global.grupo = 'https://chat.whatsapp.com/Ckzx2wkWdxQ7orAzC8tNeK'
+global.grupo2 = ''
+global.grupo3 = ''
+global.channel = 'https://whatsapp.com/channel/0029VarsCsD545unQ5Lw7429'
+global.md = '' 
+global.yt = ''
+global.tiktok = ''
+global.correo = ''
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
