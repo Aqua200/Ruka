@@ -1,3 +1,4 @@
+
 import db from '../lib/database.js'
 import { createHash } from 'crypto'
 import fs from 'fs'
@@ -7,38 +8,38 @@ let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
 let handler = async function (m, { conn, text, usedPrefix, command }) {
   let user = global.db.data.users[m.sender]
   let name2 = conn.getName(m.sender)
-  if (user.registered === true) return m.reply(`Ya estás registrado.\n\n*¿Quiere volver a registrarse?*\n\nUse este comando para eliminar su registro.\n*${usedPrefix}unreg*`)
-  if (!Reg.test(text)) return m.reply(`Formato incorrecto.\n\nUso del comamdo: *${usedPrefix + command} nombre.edad*\nEjemplo : *${usedPrefix + command} ${name2}.666*`)
+  if (user.registered === true) return m.reply(`🌟 𝗬𝗮 𝘁𝗲 𝗲𝗻𝗰𝘂𝗲𝗻𝘁𝗿𝗮𝘀 𝗿𝗲𝗴𝗶𝘀𝘁𝗿𝗮𝗱𝗼.\n\n¿𝗤𝘂𝗶𝗲𝗿𝗲 𝘃𝗼𝗹𝘃𝗲𝗿 𝗮 𝗿𝗲𝗴𝗶𝘀𝘁𝗿𝗮𝗿𝘀𝗲?\n\n𝗨𝘀𝗲 𝗲𝘀𝘁𝗲 𝗰𝗼𝗺𝗮𝗻𝗱𝗼 𝗽𝗮𝗿𝗮 𝗲𝗹𝗶𝗺𝗶𝗻𝗮𝗿 𝘀𝘂 𝗿𝗲𝗴𝗶𝘀𝘁𝗿𝗼.\n*${usedPrefix}unreg*`)
+  if (!Reg.test(text)) return m.reply(`Eʟ ғᴏʀᴍᴀᴛᴏ ɪɴɢʀᴇsᴀᴅᴏ ᴇs ɪɴᴄᴏʀʀᴇᴄᴛᴏ\n\nUsᴏ ᴅᴇʟ ᴄᴏᴍᴀɴᴅᴏ: ${usedPrefix + command} 𝗻𝗼𝗺𝗯𝗿𝗲.𝗲𝗱𝗮𝗱\nEᴊᴇᴍᴘʟᴏ : *${usedPrefix + command} ${name2}.14*`)
   let [_, name, splitter, age] = text.match(Reg)
-  if (!name) return m.reply('✿︎ El nombre no puede estar vacío.')
-  if (!age) return m.reply('✿︎ La edad no puede estar vacía.')
-  if (name.length >= 100) return m.reply('✿︎ El nombre es demasiado largo.' )
+  if (!name) return m.reply('🌟 Eʟ ɴᴏᴍʙʀᴇ ɴᴏ ᴘᴜᴇᴅᴇ ᴇsᴛᴀʀ ᴠᴀᴄɪᴏ.')
+  if (!age) return m.reply('🌟 Lᴀ ᴇᴅᴀᴅ ɴᴏ ᴘᴜᴇᴅᴇ ᴇsᴛᴀʀ ᴠᴀᴄɪ́ᴀ.')
+  if (name.length >= 100) return m.reply('🌟 El nombre es demasiado largo.' )
   age = parseInt(age)
-  if (age > 100) return m.reply('👴🏻 Wow el abuelo quiere jugar al bot.')
-  if (age < 5) return m.reply('🚼  hay un abuelo bebé jsjsj. ')
+  if (age > 100) return m.reply('*ʟᴀ ᴇᴅᴀᴅ ɪɴɢʀᴇsᴀᴅᴀ ᴇs ɪɴᴄᴏʀʀᴇᴄᴛᴀ*')
+  if (age < 5) return m.reply('*ʟᴀ ᴇᴅᴀᴅ ɪɴɢʀᴇsᴀᴅᴀ ᴇs ɪɴᴄᴏʀʀᴇᴄᴛᴀ*')
   user.name = name.trim()
   user.age = age
   user.regTime = + new Date
   user.registered = true
   global.db.data.users[m.sender].money += 600
-  global.db.data.users[m.sender].yenes += 15
+  global.db.data.users[m.sender].estrellas += 10
   global.db.data.users[m.sender].exp += 245
   global.db.data.users[m.sender].joincount += 5
   let sn = createHash('md5').update(m.sender).digest('hex')
-let regbot = `✿︎ 𝗥 𝗘 𝗚 𝗜 𝗦 𝗧 𝗥 𝗢 ✿︎\n`
-regbot += `_____________________\n`
-regbot += `「✿︎」𝗡𝗼𝗺𝗯𝗿𝗲: ${name}\n`
-regbot += `「✿︎」𝗘𝗱𝗮𝗱: ${age} años\n`
-regbot += `_____________________\n`
-regbot += `「✿︎」𝗥𝗲𝗰𝗼𝗺𝗽𝗲𝗻𝘀𝗮𝘀:\n`
-regbot += `• 15 Yenes 💴\n`
-regbot += `• 5 AkariCoins 🪙\n`
+let regbot = `☁ 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗢 ☁\n`
+regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
+regbot += `「🌟」𝗡𝗼𝗺𝗯𝗿𝗲: ${name}\n`
+regbot += `「🌟」𝗘𝗱𝗮𝗱: ${age} años\n`
+regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
+regbot += `「🎁」𝗥𝗲𝗰𝗼𝗺𝗽𝗲𝗻𝘀𝗮𝘀:\n`
+regbot += `• 15 Estrellas 🌟\n`
+regbot += `• 5 SiskedCoins 🪙\n`
 regbot += `• 245 Experiencia 💸\n`
 regbot += `• 12 Tokens 💰\n`
-regbot += `_____________________\n`
+regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
 regbot += `${packname}`
 await m.react('📩')
-await conn.sendIan(m.chat, '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰', textbot, regbot, imagen1, imagen1, channel, m)
+await conn.sendLuffy(m.chat, '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰', textbot, regbot, imagen1, imagen1, channel, m)
 }
 handler.help = ['reg']
 handler.tags = ['rg']
