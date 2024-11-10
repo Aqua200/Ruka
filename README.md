@@ -1,1 +1,17 @@
-![Menu3](https://github.com/user-attachments/assets/2437d56c-91eb-485b-8118-c764f16e6530)
+> ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
+
+```bash
+termux-setup-storage
+```
+```bash
+apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
+```
+```bash
+git clone https://github.com/CheirZ/HuTao-Proyect.git && cd HuTao-Proyect
+```
+```bash
+yarn install && npm update && npm i
+```
+```bash
+npm start
+```
