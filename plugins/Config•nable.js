@@ -66,8 +66,8 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       chat.antiBot2 = isEnable
       break
 
- case 'antifake':
-    case 'antifakes':
+ case 'anti':
+    case 'antis':
     case 'antiarabes':
     case 'antiarab':
       if (m.isGroup) {
@@ -247,16 +247,16 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     break
     default:
       if (!/[01]/.test(command)) return conn.reply(m.chat, `
-*👑 Funciones solo para owner*
+*✧ Funcion para el creador*
 
-${usedPrefix + command} antispam
-${usedPrefix + command} antiprivado
-${usedPrefix + command} subbots
-${usedPrefix + command} status
-${usedPrefix + command} restrict
 ${usedPrefix + command} autoread
+${usedPrefix + command} status
+${usedPrefix + command} subbots
+${usedPrefix + command} antiprivado
+${usedPrefix + command} restrict
+${usedPrefix + command} antispam
 
-*🌸 Funciones de grupos*
+*✿︎ Funciones de grupos*
 
 ${usedPrefix + command} welcome 
 ${usedPrefix + command} antibot
@@ -271,10 +271,10 @@ ${usedPrefix + command} nsfw
 ${usedPrefix + command} antitraba
 ${usedPrefix + command} modoadmin 
 ${usedPrefix + command} antiarabes 
-${usedPrefix + command} antilink`, m, rcanal)
+${usedPrefix + command} antilink`, m, )
       throw false
   }
-  conn.reply(m.chat, `🌸 La función *${type}* se *${isEnable ? 'activó' : 'desactivó'}* ${isAll ? 'para este Bot' : isUser ? '' : 'para este chat'}`, m, rcanal)
+  conn.reply(m.chat, `✿︎ La función *${type}* se *${isEnable ? 'activó' : 'desactivó'}* ${isAll ? 'para este Bot' : isUser ? '' : 'para este chat'}`, m, )
 }
 
 handler.help = ['enable', 'disable']
