@@ -55,7 +55,7 @@ const defaultMenu = {
 
 \t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
-    header: '*┏━✰「 %category 」*',
+    header: '* ¸.*☆*¸.*♡*.¸: 🪷 :¸.*☆*¸.*♡*.¸\n* ⁝⁞ ⍆𖤍 🌹 ⭔ %category\n* ⁝⁞ ⍆𖤍 🌹 ──── ◉ ────',
   body: '*┃✰›* %cmd',
   footer: '*┗━✰*\n',
   after: `> ${dev}`,
