@@ -359,7 +359,7 @@ m.reply('chirrido -_-')
 else
 m.exp += xp
 if (!isPrems && plugin.yenes && global.db.data.users[m.sender].yenes < plugin.yenes * 1) {
-conn.reply(m.chat, `Se agotaron tus *💴 Yenes*`, m, )
+conn.reply(m.chat, `Se agotaron tus *💴 Yenes*`, m, fake)
 continue
 }
 let extra = {
@@ -406,7 +406,7 @@ await plugin.after.call(this, m, extra)
 console.error(e)
 }}
 if (m.yenes)
-conn.reply(m.chat, `Utilizaste *${+m.yenes}* 💴`, m, )
+conn.reply(m.chat, `Utilizaste *${+m.yenes}* 💴`, m, fake)
 }
 break
 }}
@@ -468,8 +468,8 @@ if (settingsREAD.autoread2) await this.readMessages([m.key])
 // await conn.sendPresenceUpdate('composing', m.chat)
 // this.sendPresenceUpdate('recording', m.chat)
 
-if (db.data.chats[m.chat].reaction && m.text.match(/(ción|dad|aje|oso|izar|mente|pero|tion|age|ous|ate|and|but|ify|a|s)/gi)) {
-let emot = pickRandom(["✿︎", "😃", "😄", "😁", "😆", "🍓", "😅", "😂", "🤣", "🥲", "☺️", "😊", "😇", "🙂", "🙃", "😉", "😌", "😍", "🥰", "😘", "😗", "😙", "🌺", "✿︎", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🌟", "🤓", "😎", "🥸", "🤩", "🥳", "😏", "💫", "😞", "😔", "😟", "😕", "🙁", "☹️", "😣", "😖", "😫", "😩", "🥺", "😢", "😭", "😤", "😠", "😡", "🤬", "🤯", "😳", "🥵", "🥶", "😶‍🌫️", "😱", "😨", "😰", "😥", "😓", "🤗", "🤔", "🫣", "🤭", "🤖", "☆", "🤫", "🫠", "🤥", "😶", "📇", "😐", "💧", "😑", "🫨", "😬", "🙄", "😯", "😦", "😧", "😮", "😲", "🥱", "😴", "🤤", "😪", "😮‍💨", "😵", "😵‍💫", "🤐", "🥴", "🤢", "🤮", "🤧", "😷", "🤒", "🤕", "🤑", "🤠", "😈", "👿", "👺", "🧿", "🌩", "👻", "😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🫶", "👍", "✌️", "🙏", "🫵", "🤏", "🤌", "☝️", "🖕", "🙏", "🫵", "🫂", "🐱", "🤹‍♀️", "🤹‍♂️", "🗿", "ꕥ", "⚡", "🔥", "🌈", "🩷", "❤️", "🧡", "💛", "💚", "🩵", "💙", "💜", "🖤", "🩶", "🤍", "🤎", "💔", "❤️‍🔥", "❤️‍🩹", "❣️", "💕", "💞", "💓", "💗", "💖", "💘", "💝", "✿︎", "👊", "⚡️", "💋", "🫰", "💅", "👑", "🐣", "🐤", "🐈"])
+if (db.data.chats[m.chat].reaction && m.text.match(/(ción|dad|aje|oso|izar|mente|pero|tion|age|ous|ate|and|but|ify|ai|yaemori|a|s)/gi)) {
+let emot = pickRandom(["🌸", "😃", "😄", "😁", "😆", "🍓", "😅", "😂", "🤣", "🥲", "☺️", "😊", "😇", "🙂", "🙃", "😉", "😌", "😍", "🥰", "😘", "😗", "😙", "🌺", "🌸", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🌟", "🤓", "😎", "🥸", "🤩", "🥳", "😏", "💫", "😞", "😔", "😟", "😕", "🙁", "☹️", "😣", "😖", "😫", "😩", "🥺", "😢", "😭", "😤", "😠", "😡", "🤬", "🤯", "😳", "🥵", "🥶", "😶‍🌫️", "😱", "😨", "😰", "😥", "😓", "🤗", "🤔", "🫣", "🤭", "🤖", "🍭", "🤫", "🫠", "🤥", "😶", "📇", "😐", "💧", "😑", "🫨", "😬", "🙄", "😯", "😦", "😧", "😮", "😲", "🥱", "😴", "🤤", "😪", "😮‍💨", "😵", "😵‍💫", "🤐", "🥴", "🤢", "🤮", "🤧", "😷", "🤒", "🤕", "🤑", "🤠", "😈", "👿", "👺", "🧿", "🌩", "👻", "😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🫶", "👍", "✌️", "🙏", "🫵", "🤏", "🤌", "☝️", "🖕", "🙏", "🫵", "🫂", "🐱", "🤹‍♀️", "🤹‍♂️", "🗿", "✨", "⚡", "🔥", "🌈", "🩷", "❤️", "🧡", "💛", "💚", "🩵", "💙", "💜", "🖤", "🩶", "🤍", "🤎", "💔", "❤️‍🔥", "❤️‍🩹", "❣️", "💕", "💞", "💓", "💗", "💖", "💘", "💝", "🌸", "👊", "⚡️", "💋", "🫰", "💅", "👑", "🐣", "🐤", "🐈"])
 if (!m.fromMe) return this.sendMessage(m.chat, { react: { text: emot, key: m.key }})
 }
 function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
@@ -499,18 +499,18 @@ console.error(e)
 
 global.dfail = (type, m, conn) => {
 const msg = {
-rowner: '# *La función solicitada solo puede ser usada por el creador de la Bot*', 
-owner: '# *La función solo pede ser usada por el creador del bot*.', 
-mods: '# *Esta función sollo puede ser usada por los desarrolladores del Socket.*', 
-premium: '# *Esta función solo esta habilitada para usuarios premiun.', 
-group: '# *La función solicitada solo puede ser ejecutada en grupos.*', 
-private: '# *El comando ingresado solo puede ser usado al privado.*', 
-admin: '# *La función solicitada solo esta disponible para administradores.*', 
-botAdmin: '# *Para la función solicitada el bot debe ser administrador.*', 
-unreg: '# *Para usar este comando debe estar registrado*\n\n*/> reg nombre.edad*\n\n> *Ejemplo* : *#reg Sylpha.22*',
-restrict: '# *Esta función se encuentra desactivada.*'
+rowner: '「🌸」 *Esta función solo puede ser usada por mi creador*\n\n> ianalejandrook15x.', 
+owner: '「🌸」 *Esta función solo puede ser usada por mi desarrollador.', 
+mods: '「🌸」 *Esta función solo puede ser usada por mis desarrolladores.*', 
+premium: '「🌸」 *Esta función solo es para usuarios Premium.', 
+group: '「🌸」 *Esta funcion solo puede ser ejecutada en grupos.*', 
+private: '「🌸」 *Esta función solo puede ser usada en chat privado.*', 
+admin: '「🌸」 *Este comando solo puede ser usado por admins.*', 
+botAdmin: '「🌸」 *Para usar esta función debo ser admin.*', 
+unreg: '「🌸」 *¡Hey! no estas registrado, registrese para usar esta función*\n\n*/reg nombre.edad*\n\n*Ejemplo* : */reg Akari.14*',
+restrict: '「🌸」 *Esta característica esta desactivada.*'
 }[type];
-if (msg) return conn.reply(m.chat, msg, m, ).then(_ => m.react('✖️'))}
+if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))}
 
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
